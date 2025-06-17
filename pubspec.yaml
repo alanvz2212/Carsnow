@@ -79,21 +79,46 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+
 
   # To add assets to your application, add an assets section, like this:
+flutter:
   assets:
     - assets/Images/cars.png
-  #   - assets/Images/bmw
+    - assets/Images/lg.png
+    - assets/logos/tesla_logo.png
+    - assets/logos/bmw_logo.jpg
+    - assets/logos/audi_logo.png
+    - assets/logos/mercedes_logo.png
+    - assets/logos/porsche_logo.png
+    - assets/logos/ferrari_logo.png
+    - assets/Images/booking_service.jpg
+    - assets/Images/lease.jpg
+    - assets/Images/rentals.jpg
+    - assets/Images/service_contract.jpg
+    - assets/Images/bmw/bm1.jpg
+    - assets/Images/bmw/bm2.jpg
+    - assets/Images/bmw/bm3.jpg
+    - assets/Images/mercedes/b1.jpg
+    - assets/Images/mercedes/b2.jpg
+    - assets/Images/mercedes/b3.jpg
+    - assets/Images/tesla/t1.jpg
+    - assets/Images/tesla/t2.jpg
+    - assets/Images/tesla/t3.jpg
+    - assets/animations/Animation - 1735364832916.json
+    - assets/animations/Animation - 1735366182958.json
+    - assets/animations/Animation - 1735834409097.json
+    - assets/animations/Animation - 1735834925724.json
+    - assets/animations/Animation - 1737715242572.json
   #   - assets/Images/mercedes/
   #   - assets/Images/tesla/
   #   - images/a_dot_ham.jpeg
-
+  uses-material-design: true
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
