@@ -67,25 +67,21 @@ class _HostScreenState extends State<HostScreen> {
       ),
     );
   }
-    Widget _buildEmptyState(String message, String imagePath) {
+
+  Widget _buildEmptyState(String message, String imagePath) {
     return LayoutBuilder(
       builder: (context, constraints) {
         return SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
           child: ConstrainedBox(
-            constraints: BoxConstraints(
-              minHeight: constraints.maxHeight,
-            ),
+            constraints: BoxConstraints(minHeight: constraints.maxHeight),
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      height: 200,
-                      child: Lottie.asset(imagePath),
-                    ),
+                    SizedBox(height: 200, child: Lottie.asset(imagePath)),
                     const SizedBox(height: 16),
                     Text(
                       message,
@@ -104,5 +100,4 @@ class _HostScreenState extends State<HostScreen> {
       },
     );
   }
-
 }
