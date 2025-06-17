@@ -21,12 +21,6 @@ class _BaseScreenState extends State<BaseScreen> {
     HostScreen(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

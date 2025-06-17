@@ -125,49 +125,6 @@ class _SelectTripState extends State<SelectTrip> {
     );
   }
 
-  Widget _buildTimePickerButton(bool isPickup) {
-    return GestureDetector(
-      onTap: () => _showTimePicker(
-        isPickup,
-        isPickup ? _pickupDateTime : _returnDateTime,
-      ),
-      child: Row(
-        children: [
-          Icon(Icons.access_time),
-          SizedBox(width: 8),
-          Text(
-            'Select Time',
-            style: AppTextStyles.bodyRegular(color: Colors.black, fontSize: 16),
-          ),
-        ],
-      ),
-    );
-  }
-
-  _showTimePicker(bool isPickup, DateTime initialDateTime) async {
-    final newDateTime = await showTimePicker(
-      context: context,
-      initialTime: TimeOfDay.fromDateTime(initialDateTime),
-    );
-    if (newDateTime != null) {
-      final date = DateTime(
-        isPickup ? _pickupDateTime.year : _returnDateTime.year,
-        isPickup ? _pickupDateTime.month : _returnDateTime.month,
-        isPickup ? _pickupDateTime.day : _returnDateTime.day,
-        newDateTime.hour,
-        newDateTime.minute,
-      );
-      setState(() {
-        if (isPickup) {
-          _pickupDateTime = date;
-        } else {
-          _returnDateTime = date;
-        }
-      });
-    }
-    ;
-  }
-
   Widget _buildDateTimePicker({
     required String title,
     required DateTime dateTime,
