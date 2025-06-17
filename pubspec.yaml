@@ -35,16 +35,25 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   get: ^4.7.2
-  flutter_launcher_icons: ^0.14.3
+  shared_preferences: ^2.5.3
+  animated_splash_screen: ^1.3.0
+  convex_bottom_bar: ^3.2.0
+  font_awesome_flutter: ^10.8.0
+  google_fonts: ^6.2.1
+  flutter_staggered_animations: ^1.1.1
+  flutter_animate: ^4.5.2
+  animations: ^2.0.11
+  carousel_slider: ^5.1.1
+  # animated_splash_screen: ^1.3.0
+  # shared_preferences: ^2.5.3
 
-
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/Images/lg.png"
-  min_sdk_android: 23
-  adaptive_icon_background: "#FFFFFF"
-  adaptive_icon_foreground: "assets/Images/lg.png"
+# flutter_icons:
+#   android: true
+#   ios: true
+#   image_path: "assets/Images/lg.png"
+#   min_sdk_android: 23
+#   adaptive_icon_background: "#FFFFFF"
+#   adaptive_icon_foreground: "assets/Images/lg.png"
 
   # flutter_icons:
   #   android: true
@@ -78,8 +87,11 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/Images/cars.png
+  #   - assets/Images/bmw
+  #   - assets/Images/mercedes/
+  #   - assets/Images/tesla/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
       initialBinding: AppBindings(),
-      home: SplashScreen(),
     );
   }
 }
