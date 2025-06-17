@@ -3,6 +3,7 @@ import 'package:carsnow/widgets/c_appbar.dart';
 import 'package:carsnow/widgets/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 class HostScreen extends StatefulWidget {
   const HostScreen({super.key});
