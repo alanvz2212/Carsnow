@@ -1,7 +1,12 @@
+import 'package:carsnow/data/brand.dart';
 import 'package:carsnow/screens/login_screen.dart';
 import 'package:carsnow/screens/rental_screen.dart';
 import 'package:carsnow/widgets/brand_image.dart';
+import 'package:carsnow/widgets/brand_list.dart';
+import 'package:carsnow/widgets/catergory_card.dart';
 import 'package:carsnow/widgets/custom_appbar.dart';
+import 'package:carsnow/widgets/horizontal_list.dart';
+import 'package:carsnow/widgets/section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -34,9 +39,7 @@ class HomePage extends StatelessWidget {
               duration: const Duration(milliseconds: 900),
               childAnimationBuilder: (widget) => SlideAnimation(
                 horizontalOffset: 50.0,
-                child: FadeInAnimation(
-                  child: widget,
-                ),
+                child: FadeInAnimation(child: widget),
               ),
               children: [
                 // Banner
@@ -52,9 +55,7 @@ class HomePage extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (ctx) => RentalScreen(),
-                          ),
+                          MaterialPageRoute(builder: (ctx) => RentalScreen()),
                         );
                       },
                       child: CategoryCard(
@@ -85,7 +86,7 @@ class HomePage extends StatelessWidget {
                 // Budget Rental Cars
                 const SectionHeader(title: "Budget Rental Cars"),
                 const SizedBox(height: 8),
-                HorizontalCarList(),
+                HorizontalCardList(),
 
                 const SizedBox(height: 16),
 
@@ -96,11 +97,11 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 8),
                 const SectionHeader(title: "Budget Rental Cars"),
                 const SizedBox(height: 8),
-                HorizontalCarList(),
+                HorizontalCardList(),
                 const SizedBox(height: 8),
                 const SectionHeader(title: "Budget Rental Cars"),
                 const SizedBox(height: 8),
-                HorizontalCarList(),
+                HorizontalCardList(),
               ],
             ),
           ),
